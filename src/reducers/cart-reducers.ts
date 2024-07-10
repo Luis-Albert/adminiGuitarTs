@@ -19,7 +19,7 @@ export const initialState: CartState = {
 }
 
 const MAX_ITEMS = 5
-const MIN_ITEMS = 1
+//const MIN_ITEMS = 1
 
 export const cartReducer = (
     state: CartState = initialState,
@@ -35,7 +35,7 @@ export const cartReducer = (
                     if (item.quantity < MAX_ITEMS) {
                         return { ...item, quantity: item.quantity + 1 }
                     } else {
-                        return state
+                        return item
                     }
                 } else {
                     return item
